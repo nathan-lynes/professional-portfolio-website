@@ -1,0 +1,72 @@
+@font-face {
+  font-family: "Aladin";
+  src: local("Aladin Regular"), local("Aladin-Regular"), url("Aladin-Regular.woff") format("woff"), url("Aladin-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  background-color: #FFF8E8;
+  color: #394F49;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  left: 0px;
+  bottom: 0px;
+  width: auto;
+}
+
+.main {
+  display: block;
+  font-size: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.main .main_profile-photo {
+  border-radius: 30%;
+  max-width: 30%;
+  margin-top: 40px;
+}
+.main .main_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  padding-left: 150px;
+  align-items: center;
+  gap: 40px;
+  scroll-snap-type: y mandatory;
+  border-style: solid;
+  border-color: black;
+  position: fixed;
+  overflow: hidden;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.main .main_body {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  padding-left: 150px;
+  align-items: center;
+  gap: 40px;
+  gap: 40px;
+  padding-top: 100px;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  padding-left: 150px;
+  align-items: center;
+  gap: 40px;
+}
+.title .title_title {
+  color: #330F0A;
+  font-family: "Aladin";
+  font-size: 80px;
+  margin: 0px;
+}
+.title .title_subtitle {
+  color: #394F49;
+  font-family: "Aladin";
+  font-size: 40px;
+  margin: 0px;
+}/*# sourceMappingURL=main.css.map */
