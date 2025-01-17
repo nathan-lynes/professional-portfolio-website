@@ -1,0 +1,86 @@
+@import "variables";
+
+@mixin flexToCenter ($type) {
+    display: flex;
+    flex-direction: $type;
+    justify-content: center;
+    padding-left: 20px;
+    align-items: center;
+    gap: 40px;
+}
+
+@font-face {        //Font used for titles
+    font-family: 'Aladin';
+    src: local('Aladin Regular'), local('Aladin-Regular'),
+        url('Aladin-Regular.woff') format('woff'),
+        url('Aladin-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@mixin mobile {         //For mobile users
+    @media (max-width: $mobile-length) {
+        @content;
+    }
+}
+
+body {
+    background-color: $background-color;
+    color: $primary-color;
+    font-family: $body-font;
+    left: 0px;
+    bottom: 0px;
+    width: auto;
+}
+
+.main {
+    @include mobile{
+        flex-direction: column;
+    }
+    display: block;
+    font-size: 20px;
+    font-family: $body-font;
+    
+    #{&}_profile-photo{
+        border-radius: $content-border-radius;
+        max-width: 30%;
+        margin-top: 40px;
+    }
+    #{&}_photo{
+        border-radius: $image-border-radius;
+        max-width: 30%;
+        margin-top: 40px;
+    }
+    #{&}_body{
+        @include flexToCenter(row);
+        gap: 40px;
+        padding-top: 100px;
+        width: 90%;
+    }
+}
+
+.title {
+    @include flexToCenter(column);
+    #{&}_title{
+        color: $secondary-color;
+        font-family: 'Aladin';
+        font-size: 80px;
+        margin: 0px;
+    }
+    #{&}_subtitle{
+        color: $primary-color;
+        font-family: 'Aladin';
+        font-size: 40px;
+        margin: 0px;
+    }
+}
+
+.navigation {
+    overflow: hidden;
+    position: fixed;
+    background: $background-color;
+    @include flexToCenter(row);
+    width: 100%;
+    top: 0px;
+}
