@@ -49,8 +49,6 @@ body {
     }
     #{&}_photo{
         border-radius: $image-border-radius;
-        max-width: 30%;
-        margin-top: 40px;
     }
     #{&}_body{
         @include flexToCenter(row);
